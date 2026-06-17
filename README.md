@@ -1,4 +1,4 @@
-# Terraform Workspaces — Multi-Environment EC2 Deployment
+# Terraform Workspaces Multi-Environment EC2 Deployment
 
 A hands-on project that uses **Terraform Workspaces** to deploy differently-sized
 EC2 instances for **dev**, **stage**, and **prod** environments — all from the
