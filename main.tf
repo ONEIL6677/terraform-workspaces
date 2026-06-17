@@ -91,6 +91,8 @@ variable "instance_type" {
 # instance_name — passed through so the module can tag the instance with
 #                 a clear, human-readable name that includes the project name.
 # -----------------------------------------------------------------------------
+
+
 module "ec2_instance" {
   source = "./modules/ec2_instance" # Path to our reusable module folder
 
@@ -107,6 +109,8 @@ module "ec2_instance" {
 # them visible in the terminal right after "terraform apply" finishes, and
 # also retrievable anytime afterward via "terraform output".
 # -----------------------------------------------------------------------------
+
+
 output "instance_id" {
   description = "The ID of the EC2 instance created in the current workspace."
   value       = module.ec2_instance.instance_id
