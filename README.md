@@ -28,7 +28,7 @@ exact same configuration code.
 
 ---
 
-# Part 1 — Understanding Terraform Workspaces
+# Part 1. Understanding Terraform Workspaces
 
 ## What is a Terraform Workspace?
 
@@ -244,7 +244,7 @@ terraform init
 
 This downloads the AWS provider and sets up the module reference.
 
-### Step 2 — Create and Switch to the "dev" Workspace
+### Step 2. Create and Switch to the "dev" Workspace
 
 ```bash
 terraform workspace new dev
@@ -252,7 +252,7 @@ terraform workspace new dev
 
 > If the workspace already exists, use `terraform workspace select dev` instead.
 
-### Step 3 — Preview the Plan
+### Step 3. Preview the Plan
 
 ```bash
 terraform plan
@@ -260,7 +260,7 @@ terraform plan
 
 You should see a `t2.micro` instance about to be created (since we're in `dev`).
 
-### Step 4 — Apply
+### Step 4. Apply
 
 ```bash
 terraform apply
@@ -268,7 +268,7 @@ terraform apply
 
 Type `yes` to confirm.
 
-### Step 5 — Switch to "stage" and Repeat
+### Step 5. Switch to "stage" and Repeat
 
 ```bash
 terraform workspace new stage
@@ -276,7 +276,7 @@ terraform plan      # Notice instance_type is now t2.medium
 terraform apply
 ```
 
-### Step 6 — Switch to "prod" and Repeat
+### Step 6. Switch to "prod" and Repeat
 
 ```bash
 terraform workspace new prod
@@ -284,7 +284,7 @@ terraform plan      # Notice instance_type is now t2.xlarge
 terraform apply
 ```
 
-### Step 7 — Confirm All Three Exist Independently
+### Step 7. Confirm All Three Exist Independently
 
 ```bash
 terraform workspace list
