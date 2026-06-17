@@ -15,10 +15,13 @@
 # so the root configuration (or a person running `terraform output`) can
 # see exactly which instance was created.
 # -----------------------------------------------------------------------------
+
+
 output "instance_id" {
   description = "The unique ID AWS assigned to this EC2 instance."
   value       = aws_instance.this.id
 }
+
 
 # -----------------------------------------------------------------------------
 # PUBLIC IP OUTPUT
@@ -40,6 +43,8 @@ output "public_ip" {
 # active (dev/stage/prod) — this output lets us quickly confirm the
 # correct size was picked for the current workspace.
 # -----------------------------------------------------------------------------
+
+
 output "instance_type" {
   description = "The EC2 instance type that was launched."
   value       = aws_instance.this.instance_type

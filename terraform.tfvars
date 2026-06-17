@@ -20,4 +20,6 @@
 # a valid one for that new region, or "terraform apply" will fail.
 # You can find valid AMI IDs in the EC2 Console under "AMI Catalog", or
 # via: aws ec2 describe-images --owners amazon --filters "Name=name,Values=al2023-ami-*"
+
+
 ami = "ami-053b0d53c279acc90"
